@@ -11,7 +11,7 @@ A command-line application that dynamically generates a professional README.md f
 * [Tests](#tests)
 * [Questions](#questions)
 ## Description
-* Helps user to create a README file for their project
+* Helps users to create a README file for their project
 ## Demo
 https://user-images.githubusercontent.com/91503119/220112253-90038e93-3064-48ce-9681-8c30a0df9e78.mp4
 ## Installation
