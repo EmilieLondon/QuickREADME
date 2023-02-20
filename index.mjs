@@ -11,7 +11,7 @@ let {
   projectContributing,
   projectTests,
   githubQuestions,
-  emailQuestions
+  emailQuestions,
 } = await inquirer.prompt([
   {
     type: "input",
@@ -50,8 +50,6 @@ let {
       "MIT License",
       "Mozzilla Public License 2.0",
       "Open Database License (ODbl)",
-      "The Unilicense",
-      "Boost Software License 1.0",
       "Apache 2.0 License",
     ],
   },
@@ -92,17 +90,9 @@ function printBadge(license) {
     case "Open Database License (ODbl)":
       badgeURL = `[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)`;
       break;
-    case "The Unilicense":
-      badgeURL = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
-      break;
-    case "Boost Software License 1.0":
-      badgeURL = `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
-      break;
     case "Apache 2.0 License":
       badgeURL = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
       break;
-    default:
-      badgeURL = `[![License](https://img.shields.io/badge/License-Unknown-lightgrey.svg)](https://opensource.org/License-Unknown-lightgrey)`;
   }
   return badgeURL;
 }
@@ -126,7 +116,7 @@ ${projectInstallation}
 ## Usage
 * ${projectUsage}
 ## License
-* ${projectLicense}
+* This project is covered under the ${projectLicense}
 ## Contributing
 * ${projectContributing}
 ## Tests
