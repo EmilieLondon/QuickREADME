@@ -1,6 +1,7 @@
 import inquirer from "inquirer";
 import fs from "fs/promises";
 
+// storing questions in a variable
 let {
 projectTitle,
 projectDescription,
@@ -75,3 +76,38 @@ projectQuestions
     },
 ])
 
+// formatting output
+function properFormat(value) {
+    return "```\n" + value + "\n```";
+  }
+  
+  //License badges
+  function printBadge(license) {
+    let badgeURL;
+  
+    switch (license) {
+      case "MIT License":
+        badgeURL = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+        break;
+      case "Mozzilla Public License 2.0":
+        badgeURL = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+        break;
+      case "Open Database License (ODbl)":
+        badgeURL = `[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)`;
+        break;
+      case "The Unilicense":
+        badgeURL = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
+        break;
+      case "Boost Software License 1.0":
+        badgeURL = `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+        break;
+      case "Apache 2.0 License":
+        badgeURL = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+        break;
+      default:
+        badgeURL = `[![License](https://img.shields.io/badge/License-Unknown-lightgrey.svg)](https://opensource.org/License-Unknown-lightgrey)`;
+    }
+    return badgeURL;
+  }
+
+  
